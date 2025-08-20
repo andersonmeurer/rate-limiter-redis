@@ -1,5 +1,7 @@
 # Rate Limiter com Spring Boot e Redis
 
+![Arquitetura do sistema](docs/system-design.png)
+
 Este projeto implementa um sistema de rate limiting para APIs REST usando Spring Boot e Redis. O objetivo é limitar o número de requisições que um cliente pode fazer em um determinado intervalo de tempo.
 
 ## Funcionalidades
