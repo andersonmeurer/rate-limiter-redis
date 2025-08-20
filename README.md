@@ -1,35 +1,35 @@
-# Rate Limiter com Spring Boot e Redis
+# Rate Limiter with Spring Boot and Redis
 
-![Arquitetura do sistema](docs/system-design.png)
+![System Architecture](docs/system-design.png)
 
-Este projeto implementa um sistema de rate limiting para APIs REST usando Spring Boot e Redis. O objetivo é limitar o número de requisições que um cliente pode fazer em um determinado intervalo de tempo.
+This project implements a rate limiting system for REST APIs using Spring Boot and Redis. The goal is to limit the number of requests a client can make within a configurable time window.
 
-## Funcionalidades
+## Features
 
-- Limita o número de requisições por IP em uma janela de tempo configurável.
-- Utiliza Redis para armazenar contadores de requisições.
-- Retorna HTTP 429 (Too Many Requests) quando o limite é excedido.
-- Testes automatizados com MockMvc.
+- Limits the number of requests per IP in a configurable time window.
+- Uses Redis to store request counters.
+- Returns HTTP 429 (Too Many Requests) when the limit is exceeded.
+- Automated tests with MockMvc.
 
-## Estrutura do Projeto
+## Project Structure
 
-- `src/main/java/com/meurer/ratelimiter/`: Código principal da aplicação.
-- `src/main/java/com/meurer/ratelimiter/config/`: Configurações do rate limiter.
-- `src/main/java/com/meurer/ratelimiter/controller/`: Controller de teste.
-- `src/test/java/com/meurer/ratelimiter/`: Testes automatizados.
-- `docker-compose.yml`: Configuração do Redis via Docker.
+- `src/main/java/com/meurer/ratelimiter/`: Main application code.
+- `src/main/java/com/meurer/ratelimiter/config/`: Rate limiter configurations.
+- `src/main/java/com/meurer/ratelimiter/controller/`: Test controller.
+- `src/test/java/com/meurer/ratelimiter/`: Automated tests.
+- `docker-compose.yml`: Redis configuration via Docker.
 
-## Pré-requisitos
+## Prerequisites
 
 - Java 17+
 - Maven
-- Docker (para rodar o Redis)
+- Docker (to run Redis)
 
-## Passo a Passo para rodar a aplicação
+## Step-by-step to run the application
 
-1. **Suba o Redis com Docker**
+1. **Start Redis with Docker**
 
-   No diretório do projeto, execute:
+   In the project directory, run:
 
    ```sh
    docker-compose up -d
@@ -90,4 +90,4 @@ If you encounter permission issues, try running the command with sudo:
 sudo docker-compose up -d
 ```
 
-Now you can proceed with the rest of the steps (build, run, test) as described acima.
+Now you can proceed with the rest of the steps (build, run, test) as described above.
